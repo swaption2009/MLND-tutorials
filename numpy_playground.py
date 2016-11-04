@@ -1,4 +1,4 @@
-import numpy_playground as np
+import numpy as np
 
 '''
 The following code is to help you play with Numpy, which is a library
@@ -15,7 +15,7 @@ lists in Python, except that every thing inside an array must be of the
 same type, like int or float.
 '''
 # Change False to True to see Numpy arrays in action
-if True:
+if False:
     array = np.array([1, 4, 5, 8], float)
     print array
     print ""
