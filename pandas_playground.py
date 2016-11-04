@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 '''
@@ -37,7 +36,7 @@ information about your data frame. Some of these functions are:
 4) tail: displays the last five rows of the dataset
 '''
 # Change False to True to see these functions in action
-if False:
+if True:
     data = {'year': [2010, 2011, 2012, 2011, 2012, 2010, 2011, 2012],
             'team': ['Bears', 'Bears', 'Bears', 'Packers', 'Packers', 'Lions',
                      'Lions', 'Lions'],

@@ -79,7 +79,7 @@ mean and dot product.
 
 Both of these functions will be useful in later programming quizzes.
 '''
-if False:
+if True:
     array_1 = np.array([1, 2, 3], float)
     array_2 = np.array([[6], [7], [8]], float)
     print np.mean(array_1)
