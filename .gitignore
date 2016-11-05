@@ -1,6 +1,5 @@
 .gitignore
 .idea/
-data_types/
 
 numpy_playground.pyc
 scikit-learn/.idea
