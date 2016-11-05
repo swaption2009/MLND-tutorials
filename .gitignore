@@ -1,3 +1,4 @@
 .gitignore
 .idea/
 numpy_playground.pyc
+/scikit-learn/.idea
