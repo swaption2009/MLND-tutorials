@@ -1,4 +1,9 @@
 .gitignore
 .idea/
+data_types/
+
 numpy_playground.pyc
-/scikit-learn/.idea
+scikit-learn/.idea
+scikit-learn/ClassifyNB.pyc
+scikit-learn/class_vis.pyc
+scikit-learn/prep_terrain_data.pyc
