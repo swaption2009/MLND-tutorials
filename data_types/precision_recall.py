@@ -21,6 +21,9 @@ from sklearn.naive_bayes import GaussianNB
 # TODO: split the data into training and testing sets,
 # using the standard settings for train_test_split.
 # Then, train and test the classifiers with your newly split data instead of X and y.
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.4, random_state=0)
 
 clf1 = DecisionTreeClassifier()
 clf1.fit(X, y)
