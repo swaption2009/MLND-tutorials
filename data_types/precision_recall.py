@@ -23,19 +23,19 @@ from sklearn.naive_bayes import GaussianNB
 # Then, train and test the classifiers with your newly split data instead of X and y.
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.4, random_state=0)
+    X, y, test_size=0.40, random_state=0)
 
 clf1 = DecisionTreeClassifier()
-clf1.fit(X, y)
-print "Decision Tree recall: {:.2f} and precision: {:.2f}".format(recall(y,clf1.predict(X)),precision(y,clf1.predict(X)))
+clf1.fit(X_train, y_train)
+print "Decision Tree recall: {:.2f} and precision: {:.2f}".format(recall(y_test,clf1.predict(X_test)),precision(y_test,clf1.predict(X_test)))
 
 clf2 = GaussianNB()
-clf2.fit(X, y)
-print "GaussianNB recall: {:.2f} and precision: {:.2f}".format(recall(y,clf2.predict(X)),precision(y,clf2.predict(X)))
+clf2.fit(X_train, y_train)
+print "GaussianNB recall: {:.2f} and precision: {:.2f}".format(recall(y_test,clf2.predict(X_test)),precision(y_test,clf2.predict(X_test)))
 
 results = {
-  "Naive Bayes Recall": 0.40,
-  "Naive Bayes Precision": 0.63,
-  "Decision Tree Recall": 1.00,
-  "Decision Tree Precision": 1.00
+  "Naive Bayes Recall": 0.51,
+  "Naive Bayes Precision": 0.50,
+  "Decision Tree Recall": 0.39,
+  "Decision Tree Precision": 0.59
 }

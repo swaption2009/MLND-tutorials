@@ -23,14 +23,14 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=0)
 
 clf1 = DecisionTreeClassifier()
-clf1.fit(X, y)
-print "Decision Tree F1 score: {:.2f}".format(f1_score(y, clf1.predict(X)))
+clf1.fit(X_train, y_train)
+print "Decision Tree F1 score: {:.2f}".format(f1_score(y_test, clf1.predict(X_test)))
 
 clf2 = GaussianNB()
-clf2.fit(X, y)
-print "GaussianNB F1 score: {:.2f}".format(f1_score(y, clf2.predict(X)))
+clf2.fit(X_train, y_train)
+print "GaussianNB F1 score: {:.2f}".format(f1_score(y_test, clf2.predict(X_test)))
 
 F1_scores = {
- "Naive Bayes": 1.00,
- "Decision Tree": 0.49
+ "Naive Bayes": 0.51,
+ "Decision Tree": 0.47
 }
