@@ -28,14 +28,12 @@ def plot_curve():
 
     # TODO: Use learning_curve imported above to create learning curves from X and y.
     # You will need to use 'cv_sets' and 'scorer' as parameters in the function.
-    # train_sizes, train_scores, test_scores = (None, None, None)
-
     train_sizes, train_scores, valid_scores = learning_curve(reg, X, y, cv=cv_sets, scoring=scorer)
 
     # TODO: Plot the learning curves for both the training scores and testing scores.
     # Use plt.plot() twice -- one for each score. Be sure to give them labels!
-    plt.plot(train_sizes, train_scores)
-    plt.plot(train_sizes, valid_scores)
+    plt.plot(train_sizes, train_scores, 'o-', color='r', label='Train Score')
+    plt.plot(train_sizes, valid_scores, 'o-', color='g', label='Valid Score')
 
     # Plot aesthetics
     plt.ylim(-0.1, 1.1)
