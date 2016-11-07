@@ -34,8 +34,8 @@ clf2.fit(X, y)
 print "GaussianNB recall: {:.2f} and precision: {:.2f}".format(recall(y,clf2.predict(X)),precision(y,clf2.predict(X)))
 
 results = {
-  "Naive Bayes Recall": 0,
-  "Naive Bayes Precision": 0,
-  "Decision Tree Recall": 0,
-  "Decision Tree Precision": 0
+  "Naive Bayes Recall": 0.40,
+  "Naive Bayes Precision": 0.63,
+  "Decision Tree Recall": 1.00,
+  "Decision Tree Precision": 1.00
 }
