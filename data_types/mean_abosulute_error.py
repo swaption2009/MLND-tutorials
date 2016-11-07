@@ -20,14 +20,14 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=0)
 
 reg1 = DecisionTreeRegressor()
-reg1.fit(X, y)
-print "Decision Tree mean absolute error: {:.2f}".format(mae(y,reg1.predict(X)))
+reg1.fit(X_train, y_train)
+print "Decision Tree mean absolute error: {:.2f}".format(mae(y_test,reg1.predict(X_test)))
 
 reg2 = LinearRegression()
-reg2.fit(X, y)
-print "Linear regression mean absolute error: {:.2f}".format(mae(y,reg2.predict(X)))
+reg2.fit(X_train, y_train)
+print "Linear regression mean absolute error: {:.2f}".format(mae(y_test,reg2.predict(X_test)))
 
 results = {
- "Linear Regression": 0,
- "Decision Tree": 0
+ "Linear Regression": 9.88,
+ "Decision Tree": 10.41
 }
