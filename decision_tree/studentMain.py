@@ -23,3 +23,15 @@ clf = classify(features_train, labels_train)
 
 prettyPicture(clf, features_test, labels_test)
 output_image("test.png", "png", open("test.png", "rb").read())
+
+
+### measure accuracy score
+from sklearn.metrics import accuracy_score
+
+pred = clf.predict(features_test)
+acc = accuracy_score(pred, labels_test)
+print "accuracy score: ", acc
+
+def submitAccuracies():
+    return {"acc": round(acc, 3)}
+
