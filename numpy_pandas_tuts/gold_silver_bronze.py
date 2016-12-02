@@ -1,7 +1,6 @@
 import numpy
 from pandas import DataFrame, Series
 
-
 def avg_medal_count():
     '''
     Using the dataframe's apply method, create a new Series called
@@ -26,14 +25,23 @@ def avg_medal_count():
     silver = [11, 5, 10, 7, 7, 6, 3, 0, 8, 4, 1, 4, 3, 7, 4, 2, 4, 3, 1, 0, 0, 2, 2, 2, 1, 0]
     bronze = [9, 10, 5, 12, 9, 5, 2, 1, 5, 7, 1, 2, 2, 6, 2, 4, 3, 1, 2, 1, 0, 6, 2, 1, 0, 1]
 
-    olympic_medal_counts = {'country_name': countries,
+    olympic_medal_counts = {'country_name': Series(countries),
                             'gold': Series(gold),
                             'silver': Series(silver),
                             'bronze': Series(bronze)}
     df = DataFrame(olympic_medal_counts)
+    print olympic_medal_counts
 
-    print(df)
-    # YOUR CODE HERE
-    avg_medal_count = df[['gold', 'silver', 'bronze']].apply(numpy.mean)
+    # prepare data metrics for gold, silver, bronze
+    medal_counts = df[['gold', 'silver', 'bronze']]
+    # calculate points using metric multiplication
+    points = numpy.dot(medal_counts, [4,2,1])
+    # create a new data frame
+    olympic_points = {
+        'country_name': Series(countries),
+        'points': Series(points)
+    }
 
-    print(avg_medal_count)
+    print(olympic_points)
+
+avg_medal_count()
