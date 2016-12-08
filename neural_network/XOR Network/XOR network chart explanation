@@ -1,0 +1,30 @@
+# Layer 1 perceptrons
+
+Perceptron 1:   (w1,w2) = (1,0), threshold = 1
+
+    w1 * x1 + w2 * x2 = 1 * 0 + 0 * 1 = 0
+
+    Since 0 is not greater than 1, the activation is 0
+
+Perceptron 2:   (w1,w2) = (1,1), threshold = 2
+
+    w1 * x1 + w2 * x2 = 1 * 1 + 0 * 1 = 1
+
+    Since 1 is not greater than 2, the activation is 0
+
+Perceptron 3:   (w1,w2) = (0,1), threshold = 1
+
+    w1 * x1 + w2 * x2 = 0 * 0 + 1 * 1 = 1
+
+Since 1 is not greater than 1, the activation is 0
+So the inputs to the output layer are (x1,x2,x3) = (0,0,0).
+
+# Output layer
+
+Perceptron: (w1,w2,w3) = (1,-2,1), threshold = 0.5
+
+    w1 * x1 + w2 * x2 + w3 * x3 = 1 * 0 + (-2) * 0 + 1 * 0 = 0
+
+    Since 0 is not greater than 0.5, the output is 0
+
+Adjust either the weights, the thresholds, or both, so that you get an output of 1 for this input.
